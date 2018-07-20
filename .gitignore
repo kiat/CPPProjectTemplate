@@ -42,4 +42,9 @@ cmake_install.cmake
 .cproject
 .project
 .settings/
+Debug/
+
+
+# Clion
+.idea/
 
