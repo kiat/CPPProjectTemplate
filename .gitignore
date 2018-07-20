@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+# CMakeFiles 
+Makefile
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Eclipse CDT files
+
+.cproject
+.project
+.settings/
+
