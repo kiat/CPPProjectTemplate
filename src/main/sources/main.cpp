@@ -43,18 +43,21 @@ int main(int argc, char **argv) {
 	cars.push_back(myAuto);
 	cars.push_back(myTruck);
 
-	int totalNoOfPassengers=0;
+	double totalWeight=0;
 	for (AutoPtr c: cars) {
-		totalNoOfPassengers+=c->getNoOfPassengers();
+		totalWeight+=c->getTotalWeight();
 
 	}
 
-	std::cout << "Total number of passengers that my cars can hold: ";
-			std::cout << 	+  totalNoOfPassengers << std::endl;
+	std::cout << "Total weight of my cars are: ";
+			std::cout << 	+  totalWeight << std::endl;
 
      std::cout << "=======   Separator  ======== "<< std::endl;
 
 
+     std::cout << "Now Objects have no references and are removed from memory automatically."<< std::endl;
+
+     std::cout << "=======   Separator  ======== "<< std::endl;
 
 
     // No need to do the delete operations
@@ -65,15 +68,16 @@ int main(int argc, char **argv) {
 // Running Valgrind as test
 
 // $ valgrind -v ./Example-1
+//     ==4516==
+//     ==4516== HEAP SUMMARY:
+//     ==4516==     in use at exit: 0 bytes in 0 blocks
+//     ==4516==   total heap usage: 6 allocs, 6 frees, 73,888 bytes allocated
+//     ==4516==
+//     ==4516== All heap blocks were freed -- no leaks are possible
+//     ==4516==
+//     ==4516== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+//     ==4516== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-//	==23239== HEAP SUMMARY:
-//	==23239==     in use at exit: 0 bytes in 0 blocks
-//	==23239==   total heap usage: 5 allocs, 5 frees, 73,920 bytes allocated
-//	==23239==
-//	==23239== All heap blocks were freed -- no leaks are possible
-//	==23239==
-//	==23239== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-//	==23239== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 
     return 0;

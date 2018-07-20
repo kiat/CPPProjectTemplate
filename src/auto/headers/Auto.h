@@ -15,10 +15,10 @@ typedef std::shared_ptr<Auto> AutoPtr;
 class Auto {
 
 private:
-	int noOfPassengers=1;
-	double bootLoad=0;
-	double tailLoad=0;
-	double autoMainWeight=0;
+	int noOfPassengers = 1;
+	double bootLoad = 0;
+	double tailLoad = 0;
+	double autoMainWeight = 0;
 
 public:
 	Auto();
@@ -37,6 +37,11 @@ public:
 	void setBootLoad(double bootLoad);
 	double getTailLoad() const;
 	void setTailLoad(double tailLoad);
+
+	virtual double getTotalWeight() {
+		std::cout << "Parent class area :" << std::endl;
+		return 0;
+	};
 
 };
 
