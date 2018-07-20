@@ -48,7 +48,7 @@ When the object is out of reference then it will be removed from memory.
 It is done by reference counting. 
 
 
-3. **No C++ * raw pointers **
+3. **No C++ raw pointers **
 
 
 There is no need to use raw points. 
