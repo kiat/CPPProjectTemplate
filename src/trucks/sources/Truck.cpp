@@ -27,7 +27,7 @@ Truck::~Truck() {
 double Truck::getTotalWeight() {
 
 	return double(this->getNoOfPassengers() * 80) + this->getAutoMainWeight()
-			+ this-> getTailLoad();
+			+ this-> getBootLoad();
 
 }
 

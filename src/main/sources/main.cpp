@@ -2,8 +2,8 @@
 #include <cstdlib>
 #include <iostream>
 #include <sstream>
-
 #include <memory>
+#include <vector>
 
 #include "Auto.h"
 #include "SedanCar.h"
@@ -17,6 +17,7 @@ int main(int argc, char **argv) {
 	// Create 3 Objects
 	// No deletes and no new operators are used.
 
+	// This is my Auto.
 	auto  myAuto  =  std::make_shared <SedanCar>();
 	myAuto->setNoOfPassengers(4);
 	myAuto->setTailLoad(double (101.5));
@@ -25,13 +26,34 @@ int main(int argc, char **argv) {
 	std::cout <<  myAuto->getTotalWeight() << std::endl;
 
 
+	std::cout << "=======   Separator  ======== "<< std::endl;
 
+    // And this is my truck.
 	auto  myTruck  =  std::make_shared <Truck>();
 	myTruck->setNoOfPassengers(2);
 	myTruck->setTailLoad(double (500.50));
 
 	std::cout << "Total weight of my Sedan Car is: ";
 	std::cout <<  myTruck->getTotalWeight() << std::endl;
+
+	std::cout << "=======   Separator  ======== "<< std::endl;
+
+	// Now let us make a vector of my cars.
+	std::vector<AutoPtr> cars;
+	cars.push_back(myAuto);
+	cars.push_back(myTruck);
+
+	int totalNoOfPassengers=0;
+	for (AutoPtr c: cars) {
+		totalNoOfPassengers+=c->getNoOfPassengers();
+
+	}
+
+	std::cout << "Total number of passengers that my cars can hold: ";
+			std::cout << 	+  totalNoOfPassengers << std::endl;
+
+     std::cout << "=======   Separator  ======== "<< std::endl;
+
 
 
 

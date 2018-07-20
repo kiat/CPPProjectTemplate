@@ -19,7 +19,7 @@ SedanCar::SedanCar() {
 
 SedanCar::~SedanCar() {
 
-	std::cout << "A SedabCar Object is deleted from memory. " << std::endl;
+	std::cout << "A SedanCar Object is deleted from memory. " << std::endl;
 
 }
 

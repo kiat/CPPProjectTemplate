@@ -10,7 +10,7 @@
 #include <string>
 
 class Auto;
-typedef std::shared_ptr<Auto> DrinkPtr;
+typedef std::shared_ptr<Auto> AutoPtr;
 
 class Auto {
 
@@ -37,6 +37,7 @@ public:
 	void setBootLoad(double bootLoad);
 	double getTailLoad() const;
 	void setTailLoad(double tailLoad);
+
 };
 
 #endif // EXAMPLE_1_AUTO_H
