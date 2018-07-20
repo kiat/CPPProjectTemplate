@@ -1,13 +1,13 @@
 #include <unistd.h>
 #include <cstdlib>
 #include <iostream>
+#include <sstream>
 
 #include <memory>
 
-
 #include "Auto.h"
+#include "SedanCar.h"
 #include "Truck.h"
-#include "BigTruck.h"
 
 using namespace std;
 
@@ -17,19 +17,23 @@ int main(int argc, char **argv) {
 	// Create 3 Objects
 	// No deletes and no new operators are used.
 
-	auto  myAuto  =  std::make_shared <Auto>();
-	myAuto ->setName("My Auto");
-	std::cout <<  myAuto->getName() << std::endl;
+	auto  myAuto  =  std::make_shared <SedanCar>();
+	myAuto->setNoOfPassengers(4);
+	myAuto->setTailLoad(double (101.5));
+
+	std::cout << "Total weight of my Sedan Car is: ";
+	std::cout <<  myAuto->getTotalWeight() << std::endl;
 
 
-//	auto  myTruck  =  std::make_shared <Truck>();
-//	myTruck ->setName("My Truck");
-//	std::cout <<  myTruck->getName() << std::endl;
+
+	auto  myTruck  =  std::make_shared <Truck>();
+	myTruck->setNoOfPassengers(2);
+	myTruck->setTailLoad(double (500.50));
+
+	std::cout << "Total weight of my Sedan Car is: ";
+	std::cout <<  myTruck->getTotalWeight() << std::endl;
 
 
-//	auto  myBigTruck  =  std::make_shared <Auto>();
-//	myBigTruck ->setName("My Big Truck");
-//	std::cout <<  myBigTruck->getName() << std::endl;
 
     // No need to do the delete operations
 	// Objects will be reference counted.

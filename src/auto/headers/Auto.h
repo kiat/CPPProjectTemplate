@@ -2,9 +2,8 @@
 // Created by Kia Teymourian on 5/11/18.
 //
 
-#ifndef ASSIGNMENT_1_COFFEE_H
-#define ASSIGNMENT_1_COFFEE_H
-
+#ifndef EXAMPLE_1_AUTO_H
+#define EXAMPLE_1_AUTO_H
 
 #include <iostream>
 #include <memory>
@@ -16,27 +15,28 @@ typedef std::shared_ptr<Auto> DrinkPtr;
 class Auto {
 
 private:
-   std::string name;
-   int numberOfDoors;
+	int noOfPassengers=1;
+	double bootLoad=0;
+	double tailLoad=0;
+	double autoMainWeight=0;
 
-public :
-    Auto();
-
-	virtual ~Auto() {
-	}
+public:
+	Auto();
+	virtual ~Auto();
 
 	std::string& getName();
 
 	void setName(const std::string& name);
-
-	int getNumberOfDoors() const {
-		return numberOfDoors;
-	}
-
-	void setNumberOfDoors(int numberOfDoors) {
-		this->numberOfDoors = numberOfDoors;
-	}
+	double getLoad() const;
+	void setLoad(double load);
+	int getNoOfPassengers() const;
+	void setNoOfPassengers(int noOfPassengers);
+	double getAutoMainWeight() const;
+	void setAutoMainWeight(double autoMainWeight);
+	double getBootLoad() const;
+	void setBootLoad(double bootLoad);
+	double getTailLoad() const;
+	void setTailLoad(double tailLoad);
 };
 
-
-#endif //ASSIGNMENT_1_COFFEE_H
+#endif // EXAMPLE_1_AUTO_H

@@ -20,7 +20,9 @@ endif ()
 
 # set the directories with the common header files
 include_directories("${PROJECT_SOURCE_DIR}/src/auto/headers")
+include_directories("${PROJECT_SOURCE_DIR}/src/sedans/headers")
 include_directories("${PROJECT_SOURCE_DIR}/src/trucks/headers")
+
 
 
 
@@ -28,6 +30,6 @@ add_executable(
 	Example-1
         src/main/sources/main.cpp
         src/auto/sources/Auto.cpp
+        src/sedans/sources/SedanCar.cpp
         src/trucks/sources/Truck.cpp
-        src/trucks/sources/BigTruck.cpp
 	)
