@@ -48,7 +48,10 @@ When the object is out of reference then it will be removed from memory.
 It is done by reference counting. 
 
 
-3. There is no need to use raw points. 
+3. **No C++ * raw pointers **
+
+
+There is no need to use raw points. 
 
 You can always use the shared_ptr that you defined like "AutoPtr". 
 
