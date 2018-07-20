@@ -18,7 +18,9 @@ It is better to use shared pointers to avoid any possible memory leaks.
 
 Follow the following simple ruls. 
 
-1. For each Class define a type for the shared_ptr like the following
+1. **A type for the shared_ptr**
+
+For each Class define a type for the shared_ptr like the following
 
 ```c++
 
@@ -29,7 +31,7 @@ typedef std::shared_ptr<Auto> AutoPtr;
 
 ```
 
-2. No use of new operator
+2. **No use of new operator, no deletes**
 
 To instatiate an object of the specifc class 
 
@@ -40,6 +42,10 @@ To instatiate an object of the specifc class
 auto  myAuto  =  std::make_shared <Auto>();
 
 ```
+
+
+When the object is out of reference then it will be removed from memory. 
+It is done by reference counting. 
 
 
 3. There is no need to use raw points. 
