@@ -10,7 +10,7 @@
 #include "Truck.h"
 
 class BigTruck;
-typedef std::shared_ptr<BigTruck> EspressoPtr;
+typedef std::shared_ptr<BigTruck> BigTruckPtr;
 
 class BigTruck : public Truck {
 

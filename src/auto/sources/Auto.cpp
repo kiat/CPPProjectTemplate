@@ -1,4 +1,4 @@
-#include "../../auto/headers/Auto.h"
+#include "Auto.h"
 
 #include <cstdlib>
 #include <iostream>

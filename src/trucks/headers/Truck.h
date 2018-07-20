@@ -8,10 +8,10 @@
 #include <memory>
 #include <string>
 
-#include "../../auto/headers/Auto.h"
+#include "Auto.h"
 
 class Truck;
-typedef std::shared_ptr<Truck> LatteMacchiatoPtr;
+typedef std::shared_ptr<Truck> TruckPtr;
 
 class Truck: public Auto {
 
