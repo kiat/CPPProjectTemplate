@@ -62,7 +62,7 @@ If there is a real need to use c++ raw pointers you can access it as well.
 ## 4. **Keep the project structure.**
 Each component should be in a separate folder and separate namespace. 
 
-## 5. **Include headers without hardcoded path like  "../.../../"**
+## 5. **Include headers without hardcoded path like - Not like \#include "../../../Blabla.h"**
 
 Do not include the headers with the hard path on the project structure because you may want to move the header files later. 
 Header files should be included without directory structure. See the project. 
