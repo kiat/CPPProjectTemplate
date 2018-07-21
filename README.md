@@ -18,7 +18,7 @@ It is better to use shared pointers to avoid any possible memory leaks.
 
 Follow the following simple ruls. 
 
-1. **A type for the shared_ptr**
+## 1. **A type for the shared_ptr**
 
 For each Class define a type for the shared_ptr like the following
 
@@ -31,7 +31,7 @@ typedef std::shared_ptr<Auto> AutoPtr;
 
 ```
 
-2. **No use of new operator, no deletes**
+## 2. **No use of new() operator, no use of delete()**
 
 To instatiate an object of the specifc class 
 
@@ -48,7 +48,7 @@ When the object is out of reference then it will be removed from memory.
 It is done by reference counting. 
 
 
-3. **No C++ raw pointers**
+## 3. **No C++ raw pointers**
 
 
 There is no need to use raw points. 
@@ -59,10 +59,10 @@ If there is a real need to use c++ raw pointers you can access it as well.
 
 
 
-4. **Keep the project structure.**
+## 4. **Keep the project structure.**
 Each component should be in a separate folder and separate namespace. 
 
-5. **Include headers without hardcoded path like  "../.../../"**
+## 5. **Include headers without hardcoded path like  "../.../../"**
 
 Do not include the headers with the hard path on the project structure because you may want to move the header files later. 
 Header files should be included without directory structure. See the project. 
