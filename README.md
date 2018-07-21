@@ -87,3 +87,13 @@ For this project
 ```bash
 valgrind -v --leak-check=full --tool=memcheck ./Example-1
 ```
+
+
+# Code Sytle 
+
+- we recommend to use the [google C++ style guide](https://google.github.io/styleguide/cppguide.html)
+
+- we recommend to use the [Cppcheck](http://cppcheck.sourceforge.net/) to check the style of your code. 
+
+
+
