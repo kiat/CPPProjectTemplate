@@ -1,12 +1,9 @@
-language: cpp
 
-install: make cmake
+language: cpp
 
 compiler:
   - clang
-  - gcc
-  
 
 script:
    - cmake CMakeLists.txt
-   - make 
+   - make    
