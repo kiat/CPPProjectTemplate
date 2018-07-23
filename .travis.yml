@@ -1,0 +1,12 @@
+language: cpp
+
+install: make cmake
+
+compiler:
+  - clang
+  - gcc
+  
+
+script:
+   - cmake CMakeLists.txt
+   - make 
