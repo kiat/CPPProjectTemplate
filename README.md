@@ -1,5 +1,6 @@
 # CPP Project Template
 
+[![Build Status](https://travis-ci.org/kiat/CPPProjectTemplate.svg?branch=master)](https://travis-ci.org/kiat/CPPProjectTemplate)
 
 
 ## Build and Run
